@@ -1,0 +1,24 @@
+{
+  "name": "zuobiaoxi-agent",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "server": "node server/index.mjs",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run && node --test server-tests/*.test.mjs",
+    "test:client": "vitest run",
+    "test:server": "node --test server-tests/*.test.mjs",
+    "probe:model": "node scripts/probe-model.mjs"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.1.0"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "vite": "8.3.3",
+    "vitest": "5.0.3"
+  }
+}

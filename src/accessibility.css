@@ -1,0 +1,44 @@
+:root { --user-font-scale: 1; }
+body { font-size: calc(18px * var(--user-font-scale)); }
+.hero-copy, .camera-note, .status-card p, .stage-placeholder p,
+.settings-section-title > span, .settings-note, .setting-row small,
+.reason-block > span, .reason-block p, .reminder-modal > p,
+.reminder-modal > small, .session-modal > p, .eye-summary span {
+  font-size: calc(18px * var(--user-font-scale));
+  line-height: 1.65;
+}
+.button, .text-button, .simulate-button, .reason-buttons button,
+.setting-row b, .settings-section-title > b, .theme-option strong {
+  font-size: calc(18px * var(--user-font-scale));
+  min-height: 44px;
+}
+.stats span, .session-stats span, .privacy-chip, .progress-row,
+.settings-card span, .theme-option small, .mode-badge, .stage-status {
+  font-size: calc(16px * var(--user-font-scale));
+}
+.drawer-close, .modal-close, .icon-button, .settings-button {
+  min-width: 44px;
+  min-height: 44px;
+}
+.settings-drawer { width: min(560px, 100vw); }
+.settings-card { gap: 14px; }
+.controls { flex-wrap: wrap; }
+.reason-buttons { flex-wrap: wrap; }
+.reason-block p { min-height: 0; }
+.reminder-modal, .session-modal { max-height: 90vh; overflow-y: auto; }
+.theme-option small { line-height: 1.5; }
+.camera-head { flex-wrap: wrap; gap: 12px; }
+.progress-row { gap: 12px; }
+.stage-status { max-width: calc(100% - 40px); }
+button:focus-visible, a:focus-visible, input:focus-visible,
+textarea:focus-visible, select:focus-visible {
+  outline: 3px solid var(--text, #2c3e50);
+  outline-offset: 4px;
+}
+@media (max-width: 800px) {
+  .topbar, .camera-head { align-items: flex-start; }
+  .topbar-actions { flex-wrap: wrap; justify-content: flex-end; }
+  .privacy-chip { max-width: 220px; border-radius: 12px; }
+  .controls > .button { flex: 1 1 180px; }
+  .reason-buttons button { flex: 1 1 120px; }
+}
